@@ -1,38 +1,68 @@
-.App {
-  text-align: center;
+body{
+  background-color: beige;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.custom-dropdown{
+  padding: 12px;
+  max-width: 320px;
+  position: relative;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.dropdown-selectedItem{
+  background-color: white;
+  border-radius: 6px;
+  padding: 10px 16px;
+  cursor: pointer;
+  position: relative;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+.dropdown-item-list{
+  border-radius: 6px;
+  background-color: white;
+  position: absolute;
+  top: 100%;
+  width: 320px;
+}
+
+
+.dropdown-item{
+  padding: 10px 16px;
+  cursor: pointer;
+}
+
+.dropdown-item:hover {
+  background-color: #f5fff5;
+}
+
+
+.search-bar-filter input{
+  margin-top: 20px;
+  border-radius: 5px;
+  border: 1px solid #b7beb7;
+  width: 300px;
+  padding: 3px;
+  outline: none;
+  font-size: 0.9em;
+}
+
+.search-bar-filter{
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
+/* arrow css */
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.dropdown-selectedItem::after{
+  display: block;
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid #bababa;
+  border-bottom: 2px solid #bababa;
+  transform: rotate(45deg);
+  position: absolute;
+  right: 15px;
+  top: 12px;
 }
